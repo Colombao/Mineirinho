@@ -1,7 +1,8 @@
-[gd_scene load_steps=35 format=3 uid="uid://dwhu0f3j0g2oj"]
+[gd_scene load_steps=36 format=3 uid="uid://ddrmv4bo3xsjv"]
 
-[ext_resource type="Script" path="res://character/scripts/character.gd" id="1_1mctq"]
-[ext_resource type="Texture2D" uid="uid://dgv0hmbd1cnvp" path="res://sprites/characters/player.png" id="2_voe1k"]
+[ext_resource type="Script" path="res://character/scripts/character.gd" id="1_snyje"]
+[ext_resource type="Texture2D" uid="uid://dgv0hmbd1cnvp" path="res://sprites/characters/player.png" id="2_v8xeu"]
+[ext_resource type="Script" path="res://addons/2d_essentials/movement/velocity_component_2d.gd" id="3_iwijb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gfk1"]
 size = Vector2(12, 4)
@@ -798,13 +799,14 @@ states/walk/position = Vector2(551, 159)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ffyq"]
 
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_attack_timer", "_animation_tree")]
-script = ExtResource("1_1mctq")
-_attack_timer = NodePath("AttackTimer")
-_animation_tree = NodePath("AnimationTree")
+position = Vector2(48, 104)
+script = ExtResource("1_snyje")
+_attack_timer = NodePath("")
+_animation_tree = NodePath("")
 
 [node name="Texture" type="Sprite2D" parent="."]
 position = Vector2(-0.5, -17)
-texture = ExtResource("2_voe1k")
+texture = ExtResource("2_v8xeu")
 hframes = 6
 vframes = 10
 
@@ -838,5 +840,8 @@ disabled = true
 
 [node name="Camera" type="Camera2D" parent="."]
 
-[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
-[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+[node name="VelocityComponent2D" type="Node2D" parent="Camera"]
+script = ExtResource("3_iwijb")
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout" flags=18]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered" flags=18]

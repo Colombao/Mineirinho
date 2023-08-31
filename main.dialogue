@@ -1,0 +1,48 @@
+~ start
+
+if global.click_placa == false and global.inicio_aventura == false
+	Placa Magica: [[Olá|Opa|Eae]]... Bem vindo
+	- Continuar lendo
+	- Parar de ler => END
+	Placa Magica: A seguir voce encontrara desafios para voce provar seu valor voce é capaz disso?
+	- Ignorar
+		Placa Magica: [[Seu fraco|Medroso|Sem talento]] 
+		=> END
+	- Aceitar o desafio!
+		Placa Magica: Primeiro vc deve provar seu valor responde as seguintes perguntas
+		Placa Magica: Primeira pergunta Quanto é o resultado de 120/2?
+		- 60
+			Placa Magica: Parabens primeira questão está correta!
+		- 45
+			Placa Magica:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		- 55.5
+			Placa Magica:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		- 30 
+			Placa Magica:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		Placa Magica: Segunda pergunta Quanto é o resultado de 421+213?
+		- 932
+			Placa Magica:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		- 647
+			Placa Magica:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		- 634
+			Placa Magica: Parabens segunda questão está correta!
+		- 463
+			Placa Magica:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		Placa Mágica: HAHAHAHA então quer dizer que encontramos alguem apto
+		global.click_placa == true
+		global.inicio_aventura == true
+		=> END
+	else:
+		Placa Magica: [[Olá|Opa|Eae]]... Já conversamos antes 
+		Placa Magica: Gostaria de ir para a aventura novamente?
+		- Sim
+		- Não => END
+			Placa Magica: [[Vamos lá|Boa sorte|Não perca de novo]]
+		global.inicio_aventura == true
+=> END
