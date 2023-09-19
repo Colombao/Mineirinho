@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf2uvnlirheo6"]
+
+[ext_resource type="Texture2D" uid="uid://ms8lijqc6yht" path="res://Dialogos/dialogueBox.png" id="1_7p4rw"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_label.gd" id="2_gpogx"]
+
+[node name="DialogueBox" type="CanvasLayer"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 98.0
+offset_bottom = 59.0
+texture = ExtResource("1_7p4rw")
+region_rect = Rect2(8.1623, 5.52767, 23.5127, 15.54)
+
+[node name="DialogueLabel" type="RichTextLabel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_gpogx")

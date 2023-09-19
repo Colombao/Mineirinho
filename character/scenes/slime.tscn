@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://bxupa5tspew24"]
+
+[ext_resource type="Script" path="res://character/scripts/slime.gd" id="1_mst6q"]
+[ext_resource type="Texture2D" uid="uid://b02kaidsmtnom" path="res://sprites/characters/slime.png" id="2_yadrl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_27o20"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81tfw"]
+atlas = ExtResource("2_yadrl")
+region = Rect2(0, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0hdj"]
+atlas = ExtResource("2_yadrl")
+region = Rect2(32, 0, 32, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crltl"]
+atlas = ExtResource("2_yadrl")
+region = Rect2(96, 0, 32, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kuqwi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81tfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0hdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crltl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="slime" type="CharacterBody2D"]
+script = ExtResource("1_mst6q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(43, -8)
+shape = SubResource("CircleShape2D_27o20")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(43, -8)
+sprite_frames = SubResource("SpriteFrames_kuqwi")
+autoplay = "default"
+frame_progress = 0.723586
+
+[connection signal="ready" from="." to="." method="_on_ready"]

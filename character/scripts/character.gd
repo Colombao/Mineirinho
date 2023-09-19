@@ -17,7 +17,12 @@ func _ready() -> void:
 	_animation_tree.active = true
 	_state_machine = _animation_tree["parameters/playback"]
 
+
 func _physics_process(_delta: float) -> void:
+	if slime_in_range == true:
+		if Input.is_action_just_pressed("ui_accept"):
+			DialogueManager.show_example_dialogue_balloon(load("res://Dialogos/slime.dialogue"), "comeco")
+			return
 	_move()
 	_attack()
 	_animate()
@@ -60,6 +65,7 @@ func _animate() -> void:
 	_state_machine.travel("idle")
 	pass
 
+var slime_in_range = false
 
 func _on_attack_timer_timeout() -> void:
 	set_physics_process(true)
@@ -70,3 +76,12 @@ func _on_attack_area_body_entered(_body) -> void:
 	if _body.is_in_group("enemy"):
 		_body.update_health(randi_range(1,5))
 	pass # Replace with function body.
+	
+
+func _on_area_2d_body_entered(_body):
+	if _body.has_method("slime"):
+		slime_in_range = true
+
+func _on_area_2d_body_exited(_body):
+	if _body.has_method("slime"):
+		slime_in_range = false

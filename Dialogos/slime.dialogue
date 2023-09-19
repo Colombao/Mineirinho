@@ -1,0 +1,47 @@
+~ comeco
+if global.click_placa == false
+	Slime camarada: [[Olá|Opa|Eae]]... Bem vindo
+	- Continuar lendo
+	- Parar de ler => END
+	Slime camarada: A seguir voce encontrara desafios para voce provar seu valor voce é capaz disso?
+	- Ignorar
+		Slime camarada: [[Seu fraco|Medroso|Sem talento]] 
+		=> END
+	- Aceitar o desafio!
+		Slime camarada: Primeiro vc deve provar seu valor responde as seguintes perguntas
+		Slime camarada: Primeira pergunta Quanto é o resultado de 120/2?
+		- 60
+			Slime camarada: Parabens primeira questão está correta!
+		- 45
+			Slime camarada:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		- 55.5
+			Slime camarada:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		- 30 
+			Slime camarada:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		Slime camarada: Segunda pergunta Quanto é o resultado de 421+213?
+		- 932
+			Slime camarada:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		- 647
+			Slime camarada:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		- 634
+			Slime camarada: Parabens segunda questão está correta!
+		- 463
+			Slime camarada:[[Voce errou!|Está incorreta!|Voce está engando!]] 
+			=> END
+		Placa Mágica: HAHAHAHA então quer dizer que encontramos alguem apto
+		set global.inicio_aventura == true
+		set global.click_placa == true
+		=> END
+else:
+	Slime camarada: [[Olá|Opa|Eae]]... Já conversamos antes 
+	Slime camarada: Gostaria de ir para a aventura novamente?
+	- Sim
+	- Não => END
+		Slime camarada: [[Vamos lá|Boa sorte|Não perca de novo]]
+		set global.inicio_aventura == true
+=> END

@@ -1,7 +1,14 @@
-[gd_scene load_steps=35 format=3 uid="uid://dwhu0f3j0g2oj"]
+[gd_scene load_steps=52 format=3 uid="uid://dwhu0f3j0g2oj"]
 
 [ext_resource type="Script" path="res://character/scripts/character.gd" id="1_1mctq"]
 [ext_resource type="Texture2D" uid="uid://dgv0hmbd1cnvp" path="res://sprites/characters/player.png" id="2_voe1k"]
+[ext_resource type="Texture2D" uid="uid://dcsrkrmcg1wv1" path="res://SimpleKeys/Classic/Dark/Spritesheets/D.png" id="3_drbpd"]
+[ext_resource type="Texture2D" uid="uid://dbw7gx5ld5gej" path="res://SimpleKeys/Classic/Dark/Spritesheets/S.png" id="4_ogxds"]
+[ext_resource type="Texture2D" uid="uid://357eilw0tvxb" path="res://SimpleKeys/Classic/Dark/Spritesheets/A.png" id="5_6nwtb"]
+[ext_resource type="Texture2D" uid="uid://cd8lpjtrmgfm2" path="res://SimpleKeys/Classic/Dark/Spritesheets/W.png" id="6_b0qaf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_64hke"]
+radius = 17.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gfk1"]
 size = Vector2(12, 4)
@@ -794,13 +801,107 @@ states/idle/node = SubResource("AnimationNodeBlendSpace2D_3aifs")
 states/idle/position = Vector2(551, 100)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_xhuiv")
 states/walk/position = Vector2(551, 159)
+graph_offset = Vector2(-1.14441e-05, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ffyq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov0lw"]
+atlas = ExtResource("3_drbpd")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24q07"]
+atlas = ExtResource("3_drbpd")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rtns0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov0lw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24q07")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3f70"]
+atlas = ExtResource("4_ogxds")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6don"]
+atlas = ExtResource("4_ogxds")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q408c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3f70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6don")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytjan"]
+atlas = ExtResource("5_6nwtb")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmel0"]
+atlas = ExtResource("5_6nwtb")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_otq1s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytjan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmel0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tx71"]
+atlas = ExtResource("6_b0qaf")
+region = Rect2(0, 0, 17, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysp8y"]
+atlas = ExtResource("6_b0qaf")
+region = Rect2(17, 0, 17, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4a3nf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tx71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysp8y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_attack_timer", "_animation_tree")]
 script = ExtResource("1_1mctq")
 _attack_timer = NodePath("AttackTimer")
 _animation_tree = NodePath("AnimationTree")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_64hke")
 
 [node name="Texture" type="Sprite2D" parent="."]
 position = Vector2(-0.5, -17)
@@ -838,5 +939,31 @@ disabled = true
 
 [node name="Camera" type="Camera2D" parent="."]
 
+[node name="D" type="AnimatedSprite2D" parent="Camera"]
+position = Vector2(-123.774, 82.25)
+scale = Vector2(0.613971, 0.625)
+sprite_frames = SubResource("SpriteFrames_rtns0")
+autoplay = "default"
+
+[node name="S" type="AnimatedSprite2D" parent="Camera"]
+position = Vector2(-136.555, 82.125)
+scale = Vector2(0.661765, 0.640625)
+sprite_frames = SubResource("SpriteFrames_q408c")
+autoplay = "default"
+
+[node name="A" type="AnimatedSprite2D" parent="Camera"]
+position = Vector2(-150.555, 82.125)
+scale = Vector2(0.64053, 0.640624)
+sprite_frames = SubResource("SpriteFrames_otq1s")
+autoplay = "default"
+
+[node name="W" type="AnimatedSprite2D" parent="Camera"]
+position = Vector2(-136.555, 70.25)
+scale = Vector2(0.661765, 0.65625)
+sprite_frames = SubResource("SpriteFrames_4a3nf")
+autoplay = "default"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
 [connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
