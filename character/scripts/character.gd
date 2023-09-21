@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var _state_machine
 var _is_attacking: bool = false
+var e_press = KEY_E
 
 @export_category("Variables")
 @export var _move_speed: float = 64.0
@@ -20,7 +21,7 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	if slime_in_range == true:
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_pressed("ui_filedialog_show_hidden"):
 			DialogueManager.show_example_dialogue_balloon(load("res://Dialogos/slime.dialogue"), "comeco")
 			return
 	_move()

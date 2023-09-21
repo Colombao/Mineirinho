@@ -1,14 +1,44 @@
-[gd_scene load_steps=22 format=3 uid="uid://c32wpxvrqvmib"]
+[gd_scene load_steps=27 format=3 uid="uid://c32wpxvrqvmib"]
 
 [ext_resource type="Script" path="res://levels/scenes/test_level.gd" id="1_2fr8a"]
 [ext_resource type="PackedScene" uid="uid://bklwxhkrvkmh7" path="res://terrain/scenes/terrain.tscn" id="1_rusi0"]
 [ext_resource type="PackedScene" uid="uid://dwhu0f3j0g2oj" path="res://character/scenes/character.tscn" id="2_7fbb5"]
+[ext_resource type="Texture2D" uid="uid://bhh6e1jl84vbx" path="res://SimpleKeys/Jumbo/Dark/Spritesheets/H.png" id="3_odeog"]
 [ext_resource type="PackedScene" uid="uid://x3f2nxo0ato2" path="res://terrain/scenes/objects_terrain.tscn" id="3_vavce"]
 [ext_resource type="Texture2D" uid="uid://dbw7gx5ld5gej" path="res://SimpleKeys/Classic/Dark/Spritesheets/S.png" id="5_3i3br"]
 [ext_resource type="Texture2D" uid="uid://dcsrkrmcg1wv1" path="res://SimpleKeys/Classic/Dark/Spritesheets/D.png" id="5_14pue"]
 [ext_resource type="Texture2D" uid="uid://cd8lpjtrmgfm2" path="res://SimpleKeys/Classic/Dark/Spritesheets/W.png" id="5_814fa"]
 [ext_resource type="Texture2D" uid="uid://357eilw0tvxb" path="res://SimpleKeys/Classic/Dark/Spritesheets/A.png" id="6_1wv30"]
 [ext_resource type="PackedScene" uid="uid://bxupa5tspew24" path="res://character/scenes/slime.tscn" id="9_qacd6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vnjg"]
+atlas = ExtResource("3_odeog")
+region = Rect2(0, 0, 19, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgtex"]
+atlas = ExtResource("3_odeog")
+region = Rect2(19, 0, 19, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vskux"]
+atlas = ExtResource("3_odeog")
+region = Rect2(38, 0, 19, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ohq8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vnjg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgtex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vskux")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ov0lw"]
 atlas = ExtResource("5_14pue")
@@ -109,7 +139,16 @@ layer_2/tile_data = PackedInt32Array(0, 65539, 3, 1, 131075, 3, 2, 131075, 3, 3,
 [node name="YSort" type="Node2D" parent="."]
 y_sort_enabled = true
 
+[node name="H" type="AnimatedSprite2D" parent="YSort"]
+z_index = 4096
+position = Vector2(437, 135)
+scale = Vector2(0.570143, 0.455357)
+sprite_frames = SubResource("SpriteFrames_0ohq8")
+autoplay = "default"
+frame_progress = 0.822295
+
 [node name="D" type="AnimatedSprite2D" parent="YSort"]
+visible = false
 position = Vector2(264, -23)
 scale = Vector2(0.613971, 0.625)
 sprite_frames = SubResource("SpriteFrames_tyhf8")
@@ -144,4 +183,4 @@ position = Vector2(157, 59)
 layer_0/tile_data = PackedInt32Array(65548, 524288, 6, 327678, 524288, 6, 393217, 524288, 6, 131075, 0, 5, 131080, 0, 5, 327684, 655360, 7, 15, 0, 0, 16, 0, 1, 17, 327680, 0, 589853, 0, 5, 589849, 0, 5, 589845, 0, 5, 393237, 0, 5, 393241, 0, 5, 393245, 0, 5, 196629, 655360, 7, 65557, 655360, 7, 393233, 655360, 7)
 
 [node name="slime" parent="YSort" instance=ExtResource("9_qacd6")]
-position = Vector2(221, 0)
+position = Vector2(394, 158)
