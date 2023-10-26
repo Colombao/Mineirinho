@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5eeryt8t4qri"]
+
+[ext_resource type="Texture2D" uid="uid://cx1l5vw53mboo" path="res://terrain/assets/interior/gate/door_spritesheet.png" id="1_5q8yi"]
+[ext_resource type="Script" path="res://components/scripts/door_component.gd" id="1_ajai0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atdbd"]
+size = Vector2(38, 13)
+
+[sub_resource type="Animation" id="Animation_608m1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_lcode"]
+resource_name = "close"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_5lxar"]
+resource_name = "open"
+length = 2.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 13]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ritdq"]
+_data = {
+"RESET": SubResource("Animation_608m1"),
+"close": SubResource("Animation_lcode"),
+"open": SubResource("Animation_5lxar")
+}
+
+[node name="DoorComponent" type="Area2D" node_paths=PackedStringArray("_animation")]
+z_index = -1
+script = ExtResource("1_ajai0")
+_teleport_position = Vector2(137, -245)
+_animation = NodePath("Animation")
+
+[node name="texture" type="Sprite2D" parent="."]
+texture = ExtResource("1_5q8yi")
+hframes = 14
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 24.5)
+shape = SubResource("RectangleShape2D_atdbd")
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ritdq")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="Animation" to="." method="_on_animation_animation_finished"]
