@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://hxff0mqyxs3s"]
+[gd_scene load_steps=58 format=3 uid="uid://hxff0mqyxs3s"]
 
 [ext_resource type="Texture2D" uid="uid://dfbsre01cdcde" path="res://sprites/asset_cave/decorative.png" id="1_xwgbp"]
 [ext_resource type="Texture2D" uid="uid://cvctal4bryro1" path="res://sprites/asset_cave/MainLev2.0.png" id="2_wmolm"]
@@ -7,6 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://cb8jvhsb4wegw" path="res://sprites/objects/chest_01.png" id="5_65das"]
 [ext_resource type="PackedScene" uid="uid://dwhu0f3j0g2oj" path="res://character/scenes/character.tscn" id="6_exrda"]
 [ext_resource type="PackedScene" uid="uid://duwswemcenqgw" path="res://character/scenes/morcego.tscn" id="7_f610u"]
+[ext_resource type="Texture2D" uid="uid://b8a6y7mjpdhe1" path="res://sprites/Animations/orc juggernaut/OrcJuggernautIdleSide.png" id="8_uhk3u"]
+[ext_resource type="Texture2D" uid="uid://dthvciws4rco6" path="res://sprites/Animations/halfling assassin/HalflingAssassinIdleSide.png" id="9_0v8lp"]
+[ext_resource type="Texture2D" uid="uid://yhe3cjmbtf72" path="res://sprites/Animations/gnoll pikeman/GnollPikemanIdleSide.png" id="10_47ugv"]
+[ext_resource type="Texture2D" uid="uid://dwbbrt8jchlhm" path="res://sprites/Animations/gnoll grunt/GnollGruntIdleSide.png" id="11_0f04i"]
+[ext_resource type="Texture2D" uid="uid://gh54sr683aga" path="res://sprites/Animations/lizardfolk gladiator/LizardfolkGladiatorIdleSide.png" id="12_w60um"]
+[ext_resource type="Texture2D" uid="uid://2ayqnr00kpb0" path="res://sprites/Animations/halfling rogue/HalflingRogueIdleSide.png" id="13_wmq68"]
+[ext_resource type="Texture2D" uid="uid://clr43r6qjpgls" path="res://sprites/Animations/goblin occultist/GoblinOccultistIdleSide.png" id="14_y556t"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_0ssy1"]
 tile_data = PackedInt32Array(131072, 1310721, 2, 196608, 1310721, 3, 262144, 1310721, 4, 131073, 1376257, 2, 196609, 1376257, 3, 262145, 1376257, 4, 2, 1441793, 0, 65538, 1441793, 1, 131074, 1441793, 2, 196610, 1441793, 3, 262146, 1441793, 4, 3, 1507329, 0, 65539, 1507329, 1, 131075, 2490369, 2, 196611, 2490369, 3, 262147, 1507329, 4, 4, 1572865, 0, 65540, 1572865, 1, 131076, 2555905, 2, 196612, 2555905, 3, 262148, 1572865, 4, 5, 1638401, 0, 65541, 1638401, 1, 131077, 1638401, 2, 196613, 1638401, 3, 262149, 1638401, 4, 131078, 1703937, 2, 196614, 1703937, 3, 262150, 1703937, 4, 131079, 1769473, 2, 196615, 1769473, 3, 262151, 1769473, 4)
@@ -24127,6 +24134,280 @@ sources/4 = SubResource("TileSetAtlasSource_3nlud")
 pattern_0 = SubResource("TileMapPattern_0ssy1")
 pattern_1 = SubResource("TileMapPattern_727uq")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0kts"]
+atlas = ExtResource("8_uhk3u")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3j0b"]
+atlas = ExtResource("8_uhk3u")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrxgj"]
+atlas = ExtResource("8_uhk3u")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lr87t"]
+atlas = ExtResource("8_uhk3u")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hj6dy"]
+atlas = ExtResource("8_uhk3u")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuof4"]
+atlas = ExtResource("8_uhk3u")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csp4h"]
+atlas = ExtResource("8_uhk3u")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxrpc"]
+atlas = ExtResource("8_uhk3u")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xu4rs"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0kts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3j0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrxgj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lr87t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hj6dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuof4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csp4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxrpc")
+}],
+"loop": true,
+"name": &"orc_npc",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jogcf"]
+radius = 20.0
+height = 64.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l336c"]
+atlas = ExtResource("9_0v8lp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3c4u"]
+atlas = ExtResource("9_0v8lp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op2br"]
+atlas = ExtResource("9_0v8lp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enpmt"]
+atlas = ExtResource("9_0v8lp")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gh18w"]
+atlas = ExtResource("10_47ugv")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lju35"]
+atlas = ExtResource("10_47ugv")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dsbom"]
+atlas = ExtResource("10_47ugv")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubd1o"]
+atlas = ExtResource("10_47ugv")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88hcc"]
+atlas = ExtResource("11_0f04i")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0o75"]
+atlas = ExtResource("11_0f04i")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vc4ff"]
+atlas = ExtResource("11_0f04i")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgsbo"]
+atlas = ExtResource("11_0f04i")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1janc"]
+atlas = ExtResource("12_w60um")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mb1m3"]
+atlas = ExtResource("12_w60um")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lebwr"]
+atlas = ExtResource("12_w60um")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sioy"]
+atlas = ExtResource("12_w60um")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_torr7"]
+atlas = ExtResource("13_wmq68")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww6l3"]
+atlas = ExtResource("13_wmq68")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh46v"]
+atlas = ExtResource("13_wmq68")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1gxt"]
+atlas = ExtResource("13_wmq68")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7clhq"]
+atlas = ExtResource("14_y556t")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hx4i2"]
+atlas = ExtResource("14_y556t")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_of7cm"]
+atlas = ExtResource("14_y556t")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ec2qk"]
+atlas = ExtResource("14_y556t")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6417j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l336c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r3c4u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op2br")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enpmt")
+}],
+"loop": true,
+"name": &"assasin_npc",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gh18w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lju35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dsbom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubd1o")
+}],
+"loop": true,
+"name": &"gnoll.spike_npc",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88hcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0o75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vc4ff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgsbo")
+}],
+"loop": true,
+"name": &"gnoll_npc",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1janc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mb1m3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lebwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sioy")
+}],
+"loop": true,
+"name": &"lizard_npc",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_torr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww6l3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh46v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1gxt")
+}],
+"loop": true,
+"name": &"npc_rogue",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7clhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hx4i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_of7cm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ec2qk")
+}],
+"loop": true,
+"name": &"wizard_npc",
+"speed": 5.0
+}]
+
 [node name="AmbienteCaverna" type="TileMap"]
 tile_set = SubResource("TileSet_q650q")
 format = 2
@@ -24155,51 +24436,156 @@ layer_3/z_index = 0
 layer_3/tile_data = PackedInt32Array()
 
 [node name="Character" parent="." instance=ExtResource("6_exrda")]
-position = Vector2(7, 46)
+position = Vector2(-2, 15)
 
 [node name="Morcego" parent="." instance=ExtResource("7_f610u")]
-position = Vector2(978, 255)
+position = Vector2(969, 138)
 
 [node name="Morcego2" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(623, 283)
+position = Vector2(539, 291)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego3" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(360, -1)
+position = Vector2(492, 168)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego4" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(313, 160)
+position = Vector2(215, 158)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego5" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(198, 293)
+position = Vector2(249, 299)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego6" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(-34, 280)
+position = Vector2(668, -292)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego8" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(961, 3)
+position = Vector2(632, -661)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego7" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(-33, 169)
+position = Vector2(-121, 161)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego9" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(944, 139)
+position = Vector2(967, -188)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego10" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(992, 56)
+position = Vector2(959, -636)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego11" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(987, -63)
+position = Vector2(343, -522)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego12" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(932, -115)
+position = Vector2(149, -393)
 _texture = NodePath("../Morcego/Texture")
+
+[node name="npc1" type="CharacterBody2D" parent="."]
+
+[node name="anim_npc" type="AnimatedSprite2D" parent="npc1"]
+position = Vector2(56, 94)
+scale = Vector2(1.65625, 1.65625)
+sprite_frames = SubResource("SpriteFrames_xu4rs")
+animation = &"orc_npc"
+autoplay = "orc_npc"
+frame_progress = 0.539263
+centered = false
+
+[node name="CollisionNPC" type="CollisionShape2D" parent="npc1"]
+z_index = 20
+position = Vector2(85, 121)
+shape = SubResource("CapsuleShape2D_jogcf")
+
+[node name="npc2" type="CharacterBody2D" parent="."]
+
+[node name="anim_npc" type="AnimatedSprite2D" parent="npc2"]
+position = Vector2(366, -25)
+scale = Vector2(1.8125, 1.9375)
+sprite_frames = SubResource("SpriteFrames_6417j")
+animation = &"gnoll_npc"
+autoplay = "gnoll_npc"
+frame_progress = 0.557455
+centered = false
+
+[node name="CollisionNPC" type="CollisionShape2D" parent="npc2"]
+position = Vector2(379, -10)
+shape = SubResource("CapsuleShape2D_jogcf")
+
+[node name="npc3" type="CharacterBody2D" parent="."]
+
+[node name="anim_npc" type="AnimatedSprite2D" parent="npc3"]
+position = Vector2(284, -266)
+scale = Vector2(2.375, 2.3125)
+sprite_frames = SubResource("SpriteFrames_6417j")
+animation = &"gnoll.spike_npc"
+autoplay = "gnoll.spike_npc"
+frame_progress = 0.902611
+centered = false
+
+[node name="CollisionNPC" type="CollisionShape2D" parent="npc3"]
+position = Vector2(301, -250)
+shape = SubResource("CapsuleShape2D_jogcf")
+
+[node name="npc4" type="CharacterBody2D" parent="."]
+
+[node name="anim_npc" type="AnimatedSprite2D" parent="npc4"]
+position = Vector2(603, -524)
+scale = Vector2(2.375, 2.375)
+sprite_frames = SubResource("SpriteFrames_6417j")
+animation = &"wizard_npc"
+autoplay = "wizard_npc"
+centered = false
+
+[node name="CollisionNPC" type="CollisionShape2D" parent="npc4"]
+position = Vector2(617, -503)
+shape = SubResource("CapsuleShape2D_jogcf")
+
+[node name="npc5" type="CharacterBody2D" parent="."]
+
+[node name="anim_npc" type="AnimatedSprite2D" parent="npc5"]
+position = Vector2(899, -438)
+scale = Vector2(2.375, 2.375)
+sprite_frames = SubResource("SpriteFrames_6417j")
+animation = &"npc_rogue"
+autoplay = "npc_rogue"
+frame_progress = 0.230192
+centered = false
+
+[node name="CollisionNPC" type="CollisionShape2D" parent="npc5"]
+position = Vector2(907, -412)
+shape = SubResource("CapsuleShape2D_jogcf")
+
+[node name="npc6" type="CharacterBody2D" parent="."]
+
+[node name="anim_npc" type="AnimatedSprite2D" parent="npc6"]
+position = Vector2(857, 222)
+scale = Vector2(2.375, 2.375)
+sprite_frames = SubResource("SpriteFrames_6417j")
+animation = &"lizard_npc"
+autoplay = "lizard_npc"
+frame_progress = 0.0782353
+centered = false
+
+[node name="CollisionNPC" type="CollisionShape2D" parent="npc6"]
+position = Vector2(872, 237)
+shape = SubResource("CapsuleShape2D_jogcf")
+
+[node name="npc7" type="CharacterBody2D" parent="."]
+
+[node name="anim_npc" type="AnimatedSprite2D" parent="npc7"]
+position = Vector2(-82, 252)
+scale = Vector2(2.375, 2.375)
+sprite_frames = SubResource("SpriteFrames_6417j")
+animation = &"assasin_npc"
+autoplay = "assasin_npc"
+frame_progress = 0.0889613
+centered = false
+
+[node name="CollisionNPC" type="CollisionShape2D" parent="npc7"]
+position = Vector2(-63, 276)
+shape = SubResource("CapsuleShape2D_jogcf")
