@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://1utqo70ilgbt"
+path="res://.godot/imported/KingDwarfd.dialogue-3e68c5932b236bd515e8ff3d3f7840af.tres"
+
+[deps]
+
+source_file="res://Dialogos/KingDwarfd.dialogue"
+dest_files=["res://.godot/imported/KingDwarfd.dialogue-3e68c5932b236bd515e8ff3d3f7840af.tres"]
+
+[params]
+
+defaults=true

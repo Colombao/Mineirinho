@@ -1,0 +1,32 @@
+~ apresentacao_rei_anao
+
+Rei Anão: [[Saudações|Olá|Salve]], aventureiro! Eu sou Grungar, Rei dos Anões. Bem-vindo às profundezas do meu reino. Hoje, vou guiá-lo através das traiçoeiras Cavernas da Asa de Morcego... Está pronto para se aventurar?
+
+- Sim, estou pronto.
+
+- Não, Tenho medo.
+	Rei Anão: Então deseja voltar e sucumbir ao medo?
+	- Sim, por favor!
+		Rei Anão: Siga até o portal e volte imediatamente, medrosos aqui não sobrevivem! => END
+		
+	- Não, irei seguir em frente mesmo com medo!
+		Rei Anão: Estou gostando de ouvir jovem 
+	
+Rei Anão: Uma alma corajosa, de fato! A seguir vc se vai se deparar com morcegos furiosos tome muito cuidade se conseguir HEHEHEHE.
+
+- Conte-me mais sobre as Cavernas da Asa de Morcego.
+	Rei Anão: As Cavernas da Asa de Morcego ganharam seu nome devido aos inúmeros morcegos que habitam seus corredores escuros. Eles não são morcegos comuns; essas criaturas são ferozes, com presas afiadas e um gosto por sangue.
+	- Quero saber mais!
+		Rei Anão: Calma ai Amigão não force amizade apartir daqui é por voce!
+	- Irei Seguir em frente
+		Rei Anão: Avante, bravo aventureiro, até o coração das Cavernas da Asa de Morcego!
+		Rei Anão: Slime tolo deixou um cara como esse passar!
+- Irei Seguir em frente sem mas nem menos!
+	Rei Anão: Se voce insiste, boa sorte então, sei que vai precisar!
+	Rei Anão: Aquele Slime já foi mais seletivo, agora fica chegando esse tipinho de pessoa até aqui!
+
+	- Ouvir novamente => apresentacao_rei_anao
+
+	- Seguir adiante
+
+=> END

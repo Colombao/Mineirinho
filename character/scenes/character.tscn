@@ -942,6 +942,7 @@ _animation_tree = NodePath("AnimationTree")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_64hke")
 
 [node name="Texture" type="Sprite2D" parent="."]

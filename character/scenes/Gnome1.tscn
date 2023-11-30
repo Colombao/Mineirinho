@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b2pg23mjmakqt" path="res://sprites/Animations/gnome wanderer/GnomeWandererIdleSide.png" id="2_ogy2a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xdrol"]
-size = Vector2(47, 41.75)
+size = Vector2(47, 32.75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yh51k"]
 atlas = ExtResource("1_q2nw4")
@@ -81,7 +81,7 @@ animations = [{
 [node name="Gnome1" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6.125)
+position = Vector2(0, 1.625)
 shape = SubResource("RectangleShape2D_xdrol")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

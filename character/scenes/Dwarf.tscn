@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dvirb820ybiq3"]
+[gd_scene load_steps=13 format=3 uid="uid://dvirb820ybiq3"]
 
+[ext_resource type="Script" path="res://character/scenes/King.gd" id="1_f1rof"]
 [ext_resource type="Texture2D" uid="uid://cjpma4i5pm75e" path="res://sprites/Animations/dwarf king/DwarfKingIdleSide.png" id="1_sjwsj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_atbuh"]
@@ -73,6 +74,7 @@ animations = [{
 [node name="Dwarf" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_f1rof")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_atbuh")
@@ -86,3 +88,5 @@ scale = Vector2(1.09375, 1.09375)
 sprite_frames = SubResource("SpriteFrames_nd1b4")
 autoplay = "default"
 frame_progress = 0.123505
+
+[connection signal="ready" from="." to="." method="_on_ready"]

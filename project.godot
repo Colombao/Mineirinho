@@ -75,7 +75,7 @@ attack={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://teste.dialogue", "res://introducao.dialogue", "res://Dialogos/introducao.dialogue", "res://placa.dialogue", "res://slime.dialogue", "res://Dialogos/slime.dialogue")
+locale/translations_pot_files=PackedStringArray("res://teste.dialogue", "res://introducao.dialogue", "res://Dialogos/introducao.dialogue", "res://placa.dialogue", "res://slime.dialogue", "res://Dialogos/slime.dialogue", "res://Dialogos/KingDwarfd.dialogue")
 
 [rendering]
 
