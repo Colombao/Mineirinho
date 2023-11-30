@@ -77,7 +77,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lsa66"]
-size = Vector2(18, 26)
+size = Vector2(18, 13)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6abtt"]
 radius = 47.0956
@@ -99,7 +99,7 @@ libraries = {
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 show_behind_parent = true
-position = Vector2(0, -3)
+position = Vector2(0, -3.5)
 shape = SubResource("RectangleShape2D_lsa66")
 
 [node name="DetectionArea" type="Area2D" parent="."]

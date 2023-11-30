@@ -1,0 +1,88 @@
+[gd_scene load_steps=12 format=3 uid="uid://dvirb820ybiq3"]
+
+[ext_resource type="Texture2D" uid="uid://cjpma4i5pm75e" path="res://sprites/Animations/dwarf king/DwarfKingIdleSide.png" id="1_sjwsj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_atbuh"]
+radius = 19.0
+height = 62.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yadw"]
+atlas = ExtResource("1_sjwsj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnph1"]
+atlas = ExtResource("1_sjwsj")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b0c6"]
+atlas = ExtResource("1_sjwsj")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bciqo"]
+atlas = ExtResource("1_sjwsj")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gj0dm"]
+atlas = ExtResource("1_sjwsj")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4mwn"]
+atlas = ExtResource("1_sjwsj")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nbdk"]
+atlas = ExtResource("1_sjwsj")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1t0b"]
+atlas = ExtResource("1_sjwsj")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nd1b4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yadw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnph1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4b0c6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bciqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gj0dm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4mwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nbdk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1t0b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="Dwarf" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_atbuh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+y_sort_enabled = true
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(1, -3)
+scale = Vector2(1.09375, 1.09375)
+sprite_frames = SubResource("SpriteFrames_nd1b4")
+autoplay = "default"
+frame_progress = 0.123505
