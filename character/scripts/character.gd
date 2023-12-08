@@ -34,6 +34,11 @@ func _physics_process(_delta: float) -> void:
 			await(DialogueManager.show_example_dialogue_balloon(load("res://Dialogos/KingDwarfd.dialogue"), "apresentacao_rei_anao"))
 			return
 			
+	if archer_in_range == true:
+		if Input.is_action_just_pressed("ui_filedialog_show_hidden"):
+			await(DialogueManager.show_example_dialogue_balloon(load("res://Dialogos/slime.dialogue"), "comeco"))
+			return
+			
 	if is_dead:
 		return
 			
@@ -82,6 +87,7 @@ func _animate() -> void:
 
 var slime_in_range = false
 var king_in_range = false
+var archer_in_range = false
 
 func _on_attack_timer_timeout() -> void:
 	set_physics_process(true)
@@ -105,10 +111,14 @@ func _on_area_2d_body_entered(_body):
 		slime_in_range = true
 	if _body.has_method("king"):
 		king_in_range = true
+	if _body.has_method("archer"):
+		archer_in_range = true
 
 func _on_area_2d_body_exited(_body):
 	if _body.has_method("slime"):
 		slime_in_range = false
 	if _body.has_method("king"):
 		king_in_range = false
+	if _body.has_method("archer"):
+		archer_in_range = false
 

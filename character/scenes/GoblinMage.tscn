@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://64dwpfxvrtq0"]
+
+[ext_resource type="Texture2D" uid="uid://clr43r6qjpgls" path="res://sprites/Animations/goblin occultist/GoblinOccultistIdleSide.png" id="1_o4gyr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuhko"]
+atlas = ExtResource("1_o4gyr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywpkb"]
+atlas = ExtResource("1_o4gyr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxnbf"]
+atlas = ExtResource("1_o4gyr")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmn23"]
+atlas = ExtResource("1_o4gyr")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_703wd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuhko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywpkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxnbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmn23")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6mtnj"]
+
+[node name="GoblinMage" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_703wd")
+autoplay = "default"
+frame_progress = 0.979728
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_6mtnj")

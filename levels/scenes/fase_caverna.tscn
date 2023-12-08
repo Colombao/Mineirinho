@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://hxff0mqyxs3s"]
+[gd_scene load_steps=22 format=3 uid="uid://hxff0mqyxs3s"]
 
 [ext_resource type="Texture2D" uid="uid://dfbsre01cdcde" path="res://sprites/asset_cave/decorative.png" id="1_xwgbp"]
 [ext_resource type="Texture2D" uid="uid://cvctal4bryro1" path="res://sprites/asset_cave/MainLev2.0.png" id="2_wmolm"]
@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://duwswemcenqgw" path="res://character/scenes/morcego.tscn" id="7_f610u"]
 [ext_resource type="PackedScene" uid="uid://dkbhy1mveryyo" path="res://character/scenes/Gnome1.tscn" id="8_cpvit"]
 [ext_resource type="PackedScene" uid="uid://dvirb820ybiq3" path="res://character/scenes/Dwarf.tscn" id="8_rbhcw"]
+[ext_resource type="PackedScene" uid="uid://diorwovmtmgtf" path="res://character/scenes/DevilAssasin.tscn" id="9_8uoju"]
+[ext_resource type="PackedScene" uid="uid://uixw3x6v7p6g" path="res://character/scenes/DevilArcher.tscn" id="10_7unpg"]
+[ext_resource type="PackedScene" uid="uid://c4s6gvnc0cyxu" path="res://character/scenes/DevilRogue.tscn" id="11_kuv5n"]
+[ext_resource type="PackedScene" uid="uid://64dwpfxvrtq0" path="res://character/scenes/GoblinMage.tscn" id="13_yre1g"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_0ssy1"]
 tile_data = PackedInt32Array(131072, 1310721, 2, 196608, 1310721, 3, 262144, 1310721, 4, 131073, 1376257, 2, 196609, 1376257, 3, 262145, 1376257, 4, 2, 1441793, 0, 65538, 1441793, 1, 131074, 1441793, 2, 196610, 1441793, 3, 262146, 1441793, 4, 3, 1507329, 0, 65539, 1507329, 1, 131075, 2490369, 2, 196611, 2490369, 3, 262147, 1507329, 4, 4, 1572865, 0, 65540, 1572865, 1, 131076, 2555905, 2, 196612, 2555905, 3, 262148, 1572865, 4, 5, 1638401, 0, 65541, 1638401, 1, 131077, 1638401, 2, 196613, 1638401, 3, 262149, 1638401, 4, 131078, 1703937, 2, 196614, 1703937, 3, 262150, 1703937, 4, 131079, 1769473, 2, 196615, 1769473, 3, 262151, 1769473, 4)
@@ -24167,11 +24171,11 @@ position = Vector2(623, 283)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego3" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(360, -1)
+position = Vector2(814, 287)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego4" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
-position = Vector2(313, 160)
+position = Vector2(487, 299)
 _texture = NodePath("../Morcego/Texture")
 
 [node name="Morcego5" parent="." node_paths=PackedStringArray("_texture") instance=ExtResource("7_f610u")]
@@ -24210,5 +24214,23 @@ _texture = NodePath("../Morcego/Texture")
 position = Vector2(-72, 201)
 disable_mode = 2
 
+[node name="DevilAssasin" parent="." instance=ExtResource("9_8uoju")]
+position = Vector2(305, -454)
+scale = Vector2(1.4, 1.4)
+
 [node name="Dwarf" parent="." instance=ExtResource("8_rbhcw")]
 position = Vector2(-35, 113)
+
+[node name="DevilArcher" parent="." instance=ExtResource("10_7unpg")]
+position = Vector2(304, 100)
+scale = Vector2(1.4, 1.4)
+
+[node name="DevilRogue" parent="." instance=ExtResource("11_kuv5n")]
+position = Vector2(308, -161)
+scale = Vector2(1.4, 1.4)
+
+[node name="GoblinMage" parent="." instance=ExtResource("13_yre1g")]
+position = Vector2(656, -557)
+scale = Vector2(1.6, 1.6)
+
+[connection signal="ready" from="DevilArcher" to="Character" method="_on_devil_archer_ready"]

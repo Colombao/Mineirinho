@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://uixw3x6v7p6g"]
+
+[ext_resource type="Texture2D" uid="uid://ch8hx2nc6otoe" path="res://sprites/Animations/halfling ranger/HalflingRangerIdleSide.png" id="1_85nh5"]
+[ext_resource type="Script" path="res://character/scenes/CharacterBody2D.gd" id="1_yehfv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cuix2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojs4n"]
+atlas = ExtResource("1_85nh5")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sawew"]
+atlas = ExtResource("1_85nh5")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm5lv"]
+atlas = ExtResource("1_85nh5")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uu1gf"]
+atlas = ExtResource("1_85nh5")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5jrvv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojs4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sawew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm5lv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uu1gf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="DevilArcher" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_yehfv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_cuix2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(-4.76837e-07, -0.5)
+scale = Vector2(1, 1.0625)
+sprite_frames = SubResource("SpriteFrames_5jrvv")
+autoplay = "default"
+frame_progress = 0.875246

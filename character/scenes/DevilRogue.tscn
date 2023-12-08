@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4s6gvnc0cyxu"]
+
+[ext_resource type="Texture2D" uid="uid://2ayqnr00kpb0" path="res://sprites/Animations/halfling rogue/HalflingRogueIdleSide.png" id="1_cl1db"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yufdl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3scb"]
+atlas = ExtResource("1_cl1db")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cb6l"]
+atlas = ExtResource("1_cl1db")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7gbh"]
+atlas = ExtResource("1_cl1db")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psurf"]
+atlas = ExtResource("1_cl1db")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b6ai6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3scb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cb6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7gbh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psurf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="DevilRogue" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_yufdl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(1, -1)
+sprite_frames = SubResource("SpriteFrames_b6ai6")
+autoplay = "default"
+frame_progress = 0.927236

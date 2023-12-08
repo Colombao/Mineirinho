@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dp60hul3slcum"]
+[gd_scene load_steps=5 format=3 uid="uid://dp60hul3slcum"]
 
 [ext_resource type="PackedScene" uid="uid://hxff0mqyxs3s" path="res://levels/scenes/fase_caverna.tscn" id="1_706bj"]
 [ext_resource type="Script" path="res://levels/scenes/LevelCave.gd" id="1_bo0xh"]
 [ext_resource type="PackedScene" uid="uid://lnj5satx77kc" path="res://components/scenes/portal.tscn" id="2_lp54m"]
+[ext_resource type="Script" path="res://components/scenes/portal2.gd" id="4_mvgjr"]
 
 [node name="LevelCave" type="Node2D"]
 script = ExtResource("1_bo0xh")
@@ -12,4 +13,9 @@ script = ExtResource("1_bo0xh")
 [node name="Area2D" parent="." instance=ExtResource("2_lp54m")]
 position = Vector2(-40, 29)
 
+[node name="Area2D2" parent="." instance=ExtResource("2_lp54m")]
+position = Vector2(589, -305)
+script = ExtResource("4_mvgjr")
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_body_entered"]
