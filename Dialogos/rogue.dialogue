@@ -1,0 +1,24 @@
+~ npc3
+
+Anao Ladino: Sou uma letra muito usada,Mas não sou a primeira a falar.Sou a primeira a começar,Mas não sou a primeira a terminar.
+Anao Ladino: Qual letra eu sou?
+- Bom dia?
+	Anao Ladino: ME RESPONDA !
+	- Ouvir novamente => npc3
+
+- A ?
+	Anao Ladino: SEU LOUCO! Voce está certo ta liberado!
+	=> END
+
+- B ?
+	Anao Ladino: SEU LOUCO!
+	=> END
+
+- C ?
+	Anao Ladino: SEU LOUCO!
+	=> END!
+
+- D ?
+	Anao Ladino: SEU LOUCO!
+	=> END
+

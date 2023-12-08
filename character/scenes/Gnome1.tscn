@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://dkbhy1mveryyo"]
+[gd_scene load_steps=15 format=3 uid="uid://dkbhy1mveryyo"]
 
+[ext_resource type="Script" path="res://character/scenes/Gnome1.gd" id="1_f4f7i"]
 [ext_resource type="Texture2D" uid="uid://q6m3h77th56f" path="res://sprites/Animations/gnome tinkerer/GnomeTinkererIdleSide.png" id="1_q2nw4"]
 [ext_resource type="Texture2D" uid="uid://b2pg23mjmakqt" path="res://sprites/Animations/gnome wanderer/GnomeWandererIdleSide.png" id="2_ogy2a"]
 
@@ -79,6 +80,7 @@ animations = [{
 }]
 
 [node name="Gnome1" type="CharacterBody2D"]
+script = ExtResource("1_f4f7i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.625)

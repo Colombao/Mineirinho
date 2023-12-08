@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4s6gvnc0cyxu"]
+[gd_scene load_steps=9 format=3 uid="uid://c4s6gvnc0cyxu"]
 
 [ext_resource type="Texture2D" uid="uid://2ayqnr00kpb0" path="res://sprites/Animations/halfling rogue/HalflingRogueIdleSide.png" id="1_cl1db"]
+[ext_resource type="Script" path="res://character/scenes/Rogue.gd" id="1_p4ulk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yufdl"]
 
@@ -43,6 +44,7 @@ animations = [{
 [node name="DevilRogue" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_p4ulk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_yufdl")

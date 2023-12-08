@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cjkpb152v2t7j"]
+[gd_scene load_steps=5 format=3 uid="uid://cjkpb152v2t7j"]
 
 [ext_resource type="PackedScene" uid="uid://dflsspgbjl782" path="res://terrain/scenes/terrainlvl_2.tscn" id="1_ql8ug"]
 [ext_resource type="PackedScene" uid="uid://dwhu0f3j0g2oj" path="res://character/scenes/character.tscn" id="2_0eq4e"]
 [ext_resource type="PackedScene" uid="uid://duwswemcenqgw" path="res://character/scenes/morcego.tscn" id="2_2lg8q"]
+[ext_resource type="PackedScene" uid="uid://lnj5satx77kc" path="res://components/scenes/portal.tscn" id="4_hvi33"]
 
 [node name="Level2" type="Node2D"]
 
@@ -19,3 +20,13 @@ position = Vector2(139.256, 335.894)
 
 [node name="Character" parent="." instance=ExtResource("2_0eq4e")]
 position = Vector2(111, 136)
+
+[node name="Area2D" parent="." instance=ExtResource("4_hvi33")]
+position = Vector2(-99, 310)
+
+[node name="Area2D2" parent="." instance=ExtResource("4_hvi33")]
+position = Vector2(-101, 264)
+rotation = 0.000763421
+
+[node name="Area2D3" parent="." instance=ExtResource("4_hvi33")]
+position = Vector2(-100, 218)

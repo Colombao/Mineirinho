@@ -1,0 +1,88 @@
+~ primeironpc
+
+Anão Engenheiro: Ilhado aventureito, Eu sou o Anão Engenheiro. Se quiser continuar a conversa, responda a algumas perguntas matemáticas.
+Anão Engenheiro: Incidentemte Vou fazer algumas perguntas para testar voce... boa sorte!
+Anão Arqueiro: Silencio estou tentando me concentrar, tem um morcego assutador ali!
+- Ficar em Silencio 
+	Anão Arqueiro: Sabia escolha, agora não terei que te matar!
+	Anão Engenheiro: Idiota ,que matar o que você não mata nem um morceguinho KKKKKKK
+	Anão Arqueiro: Stsc tsc
+	- Perguntar ao Engenheiro sobre as questões
+	
+	- Manter o silencio!
+		Anão Arqueiro: Sossegado agora pude me concentrar e eliminar a primeira leva de morcegos! 
+#		variavel para elimiar os morcegos
+		- Perguntar ao Engenheiro sobre as questões
+	
+		- Ir embora
+		
+	- Dar um grito alto
+		Anão Arqueiro: Sofra no inferno...
+		Anão Engenheiro: Inão faça isso Arqueiro
+		=> END 
+		# variavel da morte
+			
+	
+		
+- Perguntar ao Engenheiro sobre as questões
+	Anão Engenheiro: Sabia decisão, primeira questão!
+	Anão Engenheiro: Isidio tinha 10 batatas, comeu 4, deu metade do restante para seu amigo, quantas sobraram?
+	- 5 batatas
+		Anão Engenheiro: Infelizmente está errada!
+		=> END
+	
+	- 2 batatas
+		Anão Engenheiro: Infelizmente está errada!
+		=> END
+	
+	- 0 cenouras
+		Anão Engenheiro: Ilario não é mesmo? 
+		Anão Engenheiro: Iremos para a proxima pergunta!
+		Anão Engenheiro: Icaro viajou para São paulo de carro, ele dirigiu 100km em 2 horas quanto foi sua média de velocidade?
+		- 50 m/s
+			Anão Engenheiro: Infelizmente está errada!
+			=> END
+		
+		- 100 km/h
+			Anão Engenheiro: Infelizmente está errada!
+			=> END
+		
+		- 50 km/h
+			Anão Engenheiro: Irado, você é bom mesmo hein, agora para a terceira e ultima!
+			Anão Engenheiro: Impossivel, você não ter percebido, mas mesmo assim vou falar
+			Anão Engenheiro: Inacreditavelmente eu fui pego em uma magia daquele maldito mago e agora sou um guardião de letra
+			Anão Engenheiro: Imploro pela sua ajuda, qual seria a minha letra?
+			- A
+			Anão Engenheiro: Infelizmente está errada!
+		    => END
+				
+			- B
+			Anão Engenheiro: Infelizmente está errada!
+		    => END
+				
+			- C
+			Anão Engenheiro: Infelizmente está errada!
+			=> END
+				
+			- I
+				Anão Engenheiro: Obrigada voce me libertou, guarde esta letra consigo!
+				Anão Engenheiro: Ajude a libertar os outros pelo caminho da ponte!
+				Anão Engenheiro: Ou elimine todos os morcegos pelo outro caminho!
+				=> END
+					
+		- 100 m/s
+			Anão Engenheiro: Infelizmente está errada!
+		=> END
+	
+	- 3 cenouras
+		Anão Engenheiro: Infelizmente está errada!
+		=> END!
+
+- Ir embora
+
+ 
+
+Encerrar a conversa => END
+
+
+=> END

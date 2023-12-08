@@ -1,0 +1,56 @@
+~ segundonpc
+
+Anao Arqueiro: Coitadinho de voce, me encontrou logo de cara!
+Anao Arqueiro: Caro colega só tenho 2 perguntas para voce!
+- Ouvir
+	Anao Arqueiro: Certo, vamos la!
+	Anao Arqueiro: Claudio tem três filhos. O primeiro filho tem metade da idade do segundo filho, e o segundo filho tem metade da idade do terceiro filho. Qual é a relação entre as idades dos três filhos?
+	- 1 para 2 para 4.
+		Anao Arqueiro: Caramba, nada mal vamos para segunda!
+		Anao Arqueiro: Cleber caminha 5 km para o norte, depois 5 km para o leste, depois 5 km para o sul e, finalmente, 5 km para o oeste. Em que direção ele está agora?
+		
+		- Mais ao norte
+			Anao Arqueiro: Credo que resposta mediocre
+		=> END
+		
+		- Mais ao oeste
+			Anao Arqueiro: Credo que resposta mediocre
+		=> END
+		
+		- Mesmo Lugar
+			Anao Arqueiro: Certo monstro da matematica, agora me diga minha letra e eu serei eternamento grato!
+			- A
+				Anao Arqueiro: Credo que resposta mediocre
+			=> END
+			
+			- B
+				Anao Arqueiro: Credo que resposta mediocre
+			=> END
+			
+			- C
+				Anao Arqueiro: Estou livre finalmente!!!
+			=> END
+			
+			- D
+				Anao Arqueiro: Credo que resposta mediocre
+			=> END
+		
+		- Mais ao Leste
+			Anao Arqueiro: Credo que resposta mediocre
+		=> END
+	
+	- 2 para 4 para 6.
+		Anao Arqueiro: Credo que resposta mediocre
+		=> END
+	- 3 para 6 para 9
+		Anao Arqueiro: Credo que resposta mediocre
+		=> END
+	
+	- 1 para 1 para 1
+		Anao Arqueiro: Credo que resposta mediocre
+		=> END
+		
+- Ir embora
+	=> END
+
+=> END

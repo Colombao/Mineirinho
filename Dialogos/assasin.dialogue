@@ -1,0 +1,23 @@
+~ npc4
+
+Anao Assasino: Sou o único número que é igual ao produto de suas próprias raízes.Sou o único número que é igual ao seu quadrado mais um,Sou o único número que é igual ao seu quadrado menos um.
+Anao Assasino: Qual sou eu?
+
+- A:1
+	Anao Assasino: Bom rapaz, tá liberado igual eu!
+	=> END
+
+- B:2
+	Anao Assasino: Não gosto de voce!
+	=> END
+- C:3
+	Anao Assasino: Não gosto de voce!
+	=> END
+
+- D:4
+	Anao Assasino: Não gosto de voce!
+	=> END
+
+
+
+=> END

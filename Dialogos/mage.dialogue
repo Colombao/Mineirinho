@@ -1,0 +1,43 @@
+~ npc5
+
+Anao Mago: HAHAHAHA CHEGOU ATÉ AQUI ENTÃO!
+Anao Mago: QUAL CAMINHO VC ESCOLHEU? DO BEM OU DO MAL? HAHAHAHHA
+
+- Ponte
+	Anao Mago: ENTAO ME DIGA JOVEM QUAL O NOME DO MEU MESTRE!
+	
+	- Cisar
+		Anao Mago: HIHIHI FRACO ERROU!
+		=> END
+		
+	- Isauro
+		Anao Mago: HIHIHI FRACO ERROU!
+		=> END
+	
+	- Caai
+		Anao Mago: HIHIHI FRACO ERROU!
+		=> END
+	
+	- Isaac
+		Anao Mago: SIGA EM FRENTE E LOUVE ISAAC NEWTON! HAAHAHAHAH
+		=> END
+	
+- Morcegos
+	Anao Mago: ENTAO DIGA QUANTOS DELE VC VIU NO CAMINHO?
+	
+	- 10
+		Anao Mago: PESSIMO OBSERVADOR!
+		=> END
+	- 7
+		Anao Mago: PESSIMO OBSERVADOR!
+		=> END
+	
+	- 11
+		Anao Mago: PESSIMO OBSERVADOR!
+		=> END
+	
+	- 12
+		Anao Mago: OTIMO OBSERVADOR PODE PASSAR! HAHAHAHAH
+		=> END
+	
+=> END

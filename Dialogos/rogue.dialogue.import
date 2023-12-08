@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bnahynusnr0mo"
+path="res://.godot/imported/rogue.dialogue-2f7950e5c309dc96d87883245be7f54e.tres"
+
+[deps]
+
+source_file="res://Dialogos/rogue.dialogue"
+dest_files=["res://.godot/imported/rogue.dialogue-2f7950e5c309dc96d87883245be7f54e.tres"]
+
+[params]
+
+defaults=true

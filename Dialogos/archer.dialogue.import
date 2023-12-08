@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://cwnw447t7orgs"
+path="res://.godot/imported/archer.dialogue-22b3bed868f69e91354f5110d2b98cf8.tres"
+
+[deps]
+
+source_file="res://Dialogos/archer.dialogue"
+dest_files=["res://.godot/imported/archer.dialogue-22b3bed868f69e91354f5110d2b98cf8.tres"]
+
+[params]
+
+defaults=true

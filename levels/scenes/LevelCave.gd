@@ -18,4 +18,4 @@ func _on_area_2d_ready():
 
 func _on_area_2d_body_entered(_body) -> void:
 	if _body is Character:
-		get_tree().change_scene_to_file("res://levels/scenes/test_level.tscn")
+		get_tree().change_scene_to_file("res://levels/scenes/level_2.tscn")

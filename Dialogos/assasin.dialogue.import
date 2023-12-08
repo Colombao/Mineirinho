@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://2v6ru78k2rbe"
+path="res://.godot/imported/assasin.dialogue-58c8145cba25956d4fe796d082db7258.tres"
+
+[deps]
+
+source_file="res://Dialogos/assasin.dialogue"
+dest_files=["res://.godot/imported/assasin.dialogue-58c8145cba25956d4fe796d082db7258.tres"]
+
+[params]
+
+defaults=true

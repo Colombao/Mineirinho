@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://64dwpfxvrtq0"]
+[gd_scene load_steps=9 format=3 uid="uid://64dwpfxvrtq0"]
 
+[ext_resource type="Script" path="res://character/scenes/mage.gd" id="1_d7qqs"]
 [ext_resource type="Texture2D" uid="uid://clr43r6qjpgls" path="res://sprites/Animations/goblin occultist/GoblinOccultistIdleSide.png" id="1_o4gyr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nuhko"]
@@ -43,6 +44,7 @@ animations = [{
 [node name="GoblinMage" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_d7qqs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_703wd")

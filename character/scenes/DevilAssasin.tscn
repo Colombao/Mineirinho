@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://diorwovmtmgtf"]
+[gd_scene load_steps=9 format=3 uid="uid://diorwovmtmgtf"]
 
+[ext_resource type="Script" path="res://character/scenes/Assasin.gd" id="1_1c8dx"]
 [ext_resource type="Texture2D" uid="uid://dthvciws4rco6" path="res://sprites/Animations/halfling assassin/HalflingAssassinIdleSide.png" id="1_527i1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6d47f"]
@@ -43,6 +44,7 @@ animations = [{
 [node name="DevilAssasin" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_1c8dx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_7dqfr")

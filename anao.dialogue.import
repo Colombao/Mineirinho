@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://bnqxio2i43a7o"
+path="res://.godot/imported/anao.dialogue-02a2f68a39625caae2ef1a6952bc5388.tres"
+
+[deps]
+
+source_file="res://anao.dialogue"
+dest_files=["res://.godot/imported/anao.dialogue-02a2f68a39625caae2ef1a6952bc5388.tres"]
+
+[params]
+
+defaults=true
